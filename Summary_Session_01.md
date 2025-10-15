@@ -1,4 +1,4 @@
-![ML Zoomcamp Illustration]("C:\Users\hp\Downloads\zoomcamp.jpg")
+
 ## 📚 Summary of First Session - Machine Learning Zoomcamp
 
 ### 1. **🚗 Introduction to Machine Learning with Cars Data**  
