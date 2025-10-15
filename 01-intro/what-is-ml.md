@@ -1,36 +1,100 @@
-Overview:
+# 🧠 Machine Learning — Summary from ML Zoomcamp by Alexey Grigorev
 
-Train a model
-Use a model
-This is a summary of what I’ve learned from the great ML course (http://mlzoomcamp.com) by Alexey Grigorev. All images from this post are from the course material. Images in other posts can also be copies of that material.
+> Notes and insights from the excellent [ML Zoomcamp](http://mlzoomcamp.com) course by **Alexey Grigorev**.  
+> All images and diagrams referenced here are originally from the course material.
 
-The introduction starts with an explanation about what ML really is. You can imagine a task that is normally done by an expert, like getting a good price for selling a car. The expert takes the data about the car and combines all the characteristics to get his opinion about the fair price. What he does is, he extracts patterns from the data.If a human is able to do this, so a model can do the same.
+---
 
+## 📘 Overview
 
-Following is an explanation of what ML is.
+Machine Learning (ML) is about using **features** and **target information** to **train a model**, which can then be used to **predict unknown targets**.  
+In essence, ML is the process of **extracting patterns from data**.
 
-Machine Learning (ML) is about using features and the target information to train a model and use this model to predict unknown object targets. In other words it is a process of extracting patterns from data (features+target).
+You can imagine a task that’s normally done by an expert — for example, estimating a fair price for a car.  
+The expert uses data (brand, mileage, year, condition, etc.) to form an opinion about the price.  
+Similarly, a machine learning model learns these **patterns** automatically from data.
 
-To understand this, you have to distinguish between the terms feature, target and model.
+---
 
-Features means what we know about an object. In this example what we know about the characteristics of a car. A feature is a characteristic of an object in form of a number, string, or other more complex form (e.g. location information, …)
+## ⚙️ Key Concepts
 
-Target is what we want to predict. Other courses / sources also use the term label for this purpose.That means, in training, you talk about a labeled data set because you know the target. In this example, many labeled data sets of cars with prices are used to predict a label for an unknown data set of another car.
+### 🔹 Features
+Features are what we **know about an object** — its measurable characteristics.  
+In the car example, features could be:
+- Brand  
+- Year  
+- Mileage  
+- Engine size  
+- Condition  
 
-A model is the output artefact of a training that contains all the patterns learned from the trained examples. This output can be used later to make a prediction (try to output the target variable) based on features of an unknown object and the model itself.
+A **feature** can be a number, string, or even more complex information (like location coordinates).
 
-Train a model
-Model training is the process where the machine extracts the patterns from the given training data. In easy words the features are combined with the target – this leads to the model.
+---
 
+### 🎯 Target
+The **target** (or **label**) is **what we want to predict**.
 
-Use a model
-Mere training does not make a model useful. Only the application brings the benefit. Applying the trained model to an unknown data set (without target), you obtain a prediction for the missing information (here: the price).
+- During training, we use a **labeled dataset** — where both features and the target are known.
+- For example, we use many cars (features) with their prices (target) to train a model.
+- Later, we can predict the price (target) for a new car based only on its features.
 
+---
 
-To summarize the difference between model training
+### 🧩 Model
+A **model** is the output artifact of the training process —  
+it contains all the **patterns** learned from the data.
 
+Once trained, the model can:
+- Take features of a new, unseen object  
+- Predict the target variable (e.g., price of a car)
 
-and prediction
+---
 
+## 🏋️‍♂️ Train a Model
 
-is that in training process you use features and the target to get the model. And in the prediction process you only use the features and apply the trained model to get a prediction for the target variable.
+**Model training** is the process of teaching a machine to find relationships between **features** and **targets**.
+
+In simple terms:
+> features + target → model
+
+The model learns the hidden patterns that connect input variables (features) to the output variable (target).
+
+---
+
+## 🚀 Use a Model
+
+Training alone doesn’t make a model useful — **applying** it does.
+
+When we use a trained model on **new data (without targets)**, it can **predict** the missing information.
+
+Example:
+> Given a new car’s features (brand, year, mileage),  
+> the model predicts its price (target).
+
+---
+
+## 🔄 Training vs. Prediction
+
+| Process | Input | Output |
+|----------|--------|---------|
+| **Training** | Features + Target | Model |
+| **Prediction** | Features + Model | Target (Predicted) |
+
+In other words:
+- **Training** → teaches the model using known examples  
+- **Prediction** → applies the learned knowledge to new cases
+
+---
+
+### 🧾 Summary
+
+- **Machine Learning** is about discovering patterns in data.  
+- **Features** represent what we know.  
+- **Target** is what we want to predict.  
+- **Model** learns from features and target to make future predictions.  
+- **Training** builds the model; **Prediction** uses it.
+
+---
+
+📚 *Inspired by and based on course materials from [ML Zoomcamp](http://mlzoomcamp.com) by Alexey Grigorev.*
+
