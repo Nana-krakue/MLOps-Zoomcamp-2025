@@ -1,78 +1,101 @@
-# 🤖 ML Zoomcamp Notes — by Nana Yaw Krakue
+# 📚 Summary of First Session — Machine Learning Zoomcamp
 
-Welcome to my personal notes from the **[ML Zoomcamp](http://mlzoomcamp.com)** course by [Alexey Grigorev](https://linkedin.com/in/agrigorev).  
-This repository documents my learning journey in **Machine Learning**, from the foundational theory to practical application.
-
----
-
-## 🧭 Table of Contents
-- [Overview](#-overview)
-- [What is Machine Learning?](#-what-is-machine-learning)
-- [Core Concepts](#-core-concepts)
-  - [Features](#features)
-  - [Target (Label)](#target-label)
-  - [Model](#model)
-- [Training a Model](#-training-a-model)
-- [Using a Model](#-using-a-model)
-- [Training vs Prediction](#-training-vs-prediction)
-- [Summary](#-summary)
-- [Acknowledgements](#-acknowledgements)
+> Notes from the **Machine Learning Zoomcamp** by [Alexey Grigorev](http://mlzoomcamp.com).  
+> These are my personal takeaways from the first session, covering key ML fundamentals, project workflows, and Python tools for data analysis.
 
 ---
 
-## 📘 Overview
-
-These notes summarize what I’ve learned about how **machines learn from data** and how trained models are used to make predictions on new, unseen information.
-
-The content is based on the clear and practical teaching from **ML Zoomcamp**, an open course for aspiring data scientists and machine learning engineers.
+## 🚗 1. Introduction to Machine Learning with Cars Data
+We start with a dataset about cars, which includes **features** (characteristics such as brand, year, mileage) and **target** (price).  
+A Machine Learning (ML) model can extract patterns from this data — learning from known examples to predict the price of new, unseen cars.
 
 ---
 
-## 🧠 What is Machine Learning?
+## 🧠 2. Rules-Based Systems vs Machine Learning
 
-**Machine Learning (ML)** is the process of **using data to train models** that can recognize patterns and make predictions.
-
-Imagine an expert who can estimate a fair price for a car. The expert uses features like brand, year, and mileage to make a judgment.  
-Machine learning replicates this by learning those relationships automatically from historical data.
-
----
-
-## 🧩 Core Concepts
-
-### Features
-Features are the **known characteristics** of an object — for example:
-- Car brand  
-- Year  
-- Mileage  
-- Engine type  
-- Color  
-
-A feature can be numeric, categorical, or even more complex like geolocation.
+| System Type | Description |
+|--------------|-------------|
+| **Rules-Based Systems** | Involves manually writing code that defines logic and rules to process data. Extracting patterns manually becomes complex as data grows. |
+| **Machine Learning** | Models automatically learn patterns from data using **mathematics and statistics**, eliminating the need to hand-code every rule. |
 
 ---
 
-### Target (Label)
-The **target** is what we want to **predict**.  
-In supervised learning, we use a **labeled dataset** — meaning both features and the target are known.
+## 🔍 3. Supervised Machine Learning
+In **supervised learning**, models learn from **labeled data** (where outcomes are known) to make predictions on new data.  
+There are three major supervised ML types:
 
-For example:
-> Using car features (inputs) and known prices (target) to train a model.
-
-Later, the model predicts the **price** of a new car with unseen data.
-
----
-
-### Model
-A **model** is the result of training — it contains all learned patterns between **features** and **target**.
-
-Once trained, it can:
-- Take new feature inputs
-- Predict the likely target value
+- 🧩 **Classification:** The target is a *category* (e.g., spam or not spam).  
+- 📈 **Regression:** The target is a *number* (e.g., car price).  
+- 📊 **Ranking:** The output is a *ranked list* of items ordered by importance or score.
 
 ---
 
-## 🏋️ Training a Model
+## 🛠️ 4. CRISP-DM — Cross-Industry Standard Process for Data Mining
 
-**Training** is the learning phase.  
-The model analyzes examples of input (features) and output (target) to understand the relationship between them.
+CRISP-DM is a structured methodology for organizing ML projects.  
+It outlines an **iterative** process of continuous improvement across the following phases:
 
+1. 💼 **Business Understanding:**  
+   Identify the problem and define what success looks like. Decide whether ML is necessary — a rule-based solution might suffice.
+
+2. 🔎 **Data Understanding:**  
+   Explore the available data, assess its quality, and determine if more data is needed.  
+   Good business understanding helps guide this stage.
+
+3. 🧹 **Data Preparation:**  
+   Clean and transform raw data into a suitable format for modeling (e.g., handle missing values, normalize, create pipelines).
+
+4. 🤖 **Modeling:**  
+   Choose and train models, experiment with different algorithms, and adjust features to improve performance.
+
+5. 📊 **Evaluation:**  
+   Measure how well the model performs and determine if it meets business goals.
+
+6. 🚀 **Deployment:**  
+   Deliver the model to users (e.g., via an app or API).  
+   Consider maintainability, performance monitoring, and continuous model updates.
+
+> ⚙️ This process is **cyclical**, allowing you to revisit earlier stages to refine the model and improve outcomes.
+
+---
+
+## 🏆 5. Model Selection
+
+- Split the dataset into **Training**, **Validation**, and **Test** sets.  
+- Train multiple models on the training data, compare them using the validation data, and select the best performer.  
+- Finally, test the chosen model on the **test set** to check how well it generalizes to unseen data.
+
+**Note:** After selecting the best model, you can **combine** the training and validation sets to retrain it before final testing.
+
+---
+
+## 💻 6. Setting Up the Environment
+
+Install essential ML and data science tools:
+
+- 🐍 **Python**
+- 🔢 **NumPy**
+- 📊 **Pandas**
+- 📈 **Matplotlib**
+- 🧠 **Scikit-learn**
+
+👉 The easiest way to install these tools is via **Anaconda**, which provides an all-in-one data science environment.  
+Later in the course, you’ll also use **AWS** for cloud-based computation.
+
+---
+
+## 🔢 7. Introduction to NumPy
+
+NumPy is a core library for **numerical computing** in Python.  
+It provides high-performance operations on **arrays** and **matrices**, enabling efficient mathematical computations.
+
+---
+
+## 🔗 8. Linear Algebra Refresher
+
+Covers essential operations like:
+- Vector and matrix multiplication  
+- Dot products and transposes  
+- Creating identity matrices using:
+  ```python
+  np.eye()
